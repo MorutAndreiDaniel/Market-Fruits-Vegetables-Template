@@ -409,8 +409,8 @@ fieldset, label {
 .order-container__contact {
   height: 80vh;
   padding: 2em;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/Images/order background.jpg");
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/Images/order background.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("./Images/orderBackground.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./Images/orderBackground.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -682,7 +682,7 @@ footer {
   .container-header-background {
     width: 100vw;
     height: 70vh;
-    background-image: url("/Images/Header background.jpg");
+    background-image: url("./Images/HeaderBackground.jpg");
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
