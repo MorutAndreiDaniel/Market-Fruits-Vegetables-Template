@@ -1,0 +1,96 @@
+$item-bg : rgba(220,220,220, 0.5);
+$primary-clr : #ffc107;
+
+.product-btn {
+    visibility: hidden;
+    color: #fff;
+}
+.product-btn:hover {
+    visibility: visible;
+    outline: $primary-clr;
+    background-color: #fff;
+    color: $primary-clr;
+}
+
+.products {
+    margin-top: 10%;
+
+    &-row {
+        margin-top: 10%;
+    }
+}
+.row-item {
+    width: 50%;
+    padding: 3%;
+
+    .product-card {
+        
+        &__item {
+            background-color: $item-bg;
+
+            span {
+                font-size: 4em;
+            }
+        }
+
+        &__description {
+            h5,p {
+                font-weight: bold;
+            }
+            p {
+                margin-top: 0.5em;
+            }
+            
+        }
+    }
+}
+
+.product-card:hover + .product-btn {
+        visibility: visible;
+}
+.row-item:hover {
+    border-radius: 16px;
+    box-shadow:  7px 7px 14px #b8b8b8, 
+                -7px -7px 14px #c8c8c8;
+}
+/*Rating*/
+fieldset, label { margin: 0; padding: 0; }
+
+
+/****** Style Star Rating Widget *****/
+
+.rating { 
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; } 
+.rating > label:before { 
+  margin: 5px;
+  font-size: 1em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before { 
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label { 
+  color: #ddd; 
+ float: right; 
+}
+.rating > input:checked ~ label, 
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label { color: $primary-clr;  }
+
+.rating > input:checked + label:hover, 
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, 
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  } 
+
+
+  
+

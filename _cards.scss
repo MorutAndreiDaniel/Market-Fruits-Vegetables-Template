@@ -1,0 +1,102 @@
+$primary-clr : #ffc107;
+$kiwi-clr : #3FA34D;
+$strawberry-clr : #E22840;
+$grapes-clr : #941D9A;
+$fruit-font : 5rem;
+$btn-transition : all 0.3s ease-in-out;
+$border : 5%;
+
+.container-cards {
+    margin-top: 5%;
+    
+
+    /*Card 1 - mango*/
+    &__card-1 {
+        background-color: $primary-clr;   
+        height: 40vh;
+        border-radius: $border;
+    }
+    &__text-container {
+        padding-left: 2em;
+        color: #fff;
+
+        .btn {
+            color: $primary-clr;
+            background-color: #fff;
+            margin-top: 5%;
+            transition: $btn-transition;
+        }
+        .btn:hover {
+            background-color: #dc3545;
+            color: #fff;
+        }
+    }
+    .mango:before {
+        content: '\1F96D';
+        font-size: $fruit-font;
+    }
+
+    /*Card 2 - kiwi*/
+    &__card-2 {
+        background-color: $kiwi-clr;
+        height: 40vh;
+        margin-top: 5%;
+        border-radius: $border;
+
+        .btn {
+            color: $kiwi-clr;
+            border: none;
+            transition: $btn-transition;
+        }
+        .btn:hover {
+            background-color: #AA724B;
+        }
+    }
+    .kiwi:before {
+        content: '\1F95D';
+        font-size: $fruit-font;
+    }
+
+    /*Card 3 - strawberry*/
+    &__card-3 {
+        background-color: $strawberry-clr;
+        height: 40vh;
+        margin-top: 5%;
+        border-radius: $border;
+
+        .btn {
+            border: none;
+            color: $strawberry-clr;
+            transition: $btn-transition;
+        }
+        .btn:hover {
+            background-color: #48AD7E;
+        }
+    }
+    .strawberry:before {
+        content: '\1F353';
+        font-size: $fruit-font;
+    }
+
+    /*Card 4 - grapes*/
+
+    &__card-4 {
+        background-color: $grapes-clr;
+        height: 40vh;
+        margin-top: 5%;
+        border-radius: $border;
+
+        .btn {
+            border: none;
+            color: $grapes-clr;
+            transition: $btn-transition;
+        }
+        .btn:hover {
+            background-color: #6303C9;
+        }
+    }
+    .grapes:before {
+        content: '\1F347';
+        font-size: $fruit-font;
+    }
+}

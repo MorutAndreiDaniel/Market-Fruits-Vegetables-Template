@@ -1,0 +1,39 @@
+.order-container {
+    padding: 3em;
+    &__form {
+        padding: 2em;
+
+        .btn {
+            width: 40%;
+            transition: all 0.3s ease-in-out;
+        }
+        .btn:hover {
+        background-color: #fff;
+        outline: 2px solid #ffc107;
+        border-radius: 2%;
+        }
+        input[type=text]:hover, input[type=email]:hover, textarea:hover {
+            outline: 2px solid #ffc107;
+        }
+        input[type=text]:focus, input[type=email]:focus, textarea:focus {
+            outline: none;
+        }
+    }
+    &__contact {
+        height: 80vh;
+        padding: 2em;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/Images/order\ background.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+        opacity: 0.7;
+
+        
+        &-overlay {
+            h2,h5,p {
+                color: #fff;
+            }
+        }
+    }
+}

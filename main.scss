@@ -1,0 +1,382 @@
+@import "cards";
+@import "delivery";
+@import "products";
+@import "basket";
+@import "organic";
+@import "order";
+
+/*Variables*/
+$primary-clr : #ffc107;
+$width : 40%;
+$btn-transition : all 0.3s ease-in-out;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lora', serif;
+}
+body {
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6,p,a, .btn {
+    letter-spacing: 0.1em;
+}
+
+/*Back to top button*/
+.top-link {
+    display: inline-block;
+    background-color: #FF9800;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    border: 2px solid black;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s, 
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    &.show {
+        visibility: visible;
+        opacity: 1;
+      }
+
+    &.hide {
+        visibility: hidden;
+        opacity: 0;
+    }
+      
+  }
+  .top-link:after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  .top-link:hover {
+    cursor: pointer;
+    background-color: #333;
+  }
+  .top-link:active {
+    background-color: #555;
+  }
+  .top-link.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+.navbar-light .navbar-brand {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    color: $primary-clr;
+}
+.navbar .btn {
+    width: $width;
+    transition: $btn-transition;
+}
+/*Container Header*/
+.container-header {
+    margin-top: 5%;
+    padding: 1.5em;
+
+    h3 {
+        color: $primary-clr;
+    }
+    .btn {
+        width: $width;
+        transition: $btn-transition;
+    }
+    .btn:hover {
+        background-color: #fff;
+        outline: 2px solid $primary-clr;
+        border-radius: 2%;
+    }
+}
+
+/*Footer*/
+footer {
+    height: 10vh;
+    margin-top: 5%;
+    background-color: $primary-clr;
+}
+
+/*Media Queries*/
+@media screen and(min-width: 550px) {
+    .navbar .btn, .container-header .btn {
+        width: 30%;
+    }
+    .products .row .row-item .btn {
+        margin: 0 15%;
+    }
+    .organic-fruits-container {
+        &__row {
+            .row-item {
+                .btn {
+                    margin: 0 15%;
+                    
+                }
+            }
+        }
+    }
+    .organic-veg-container__row .product-item {
+        height: 25vh;
+        display: flex;
+        align-items: center;
+    }
+
+}
+@media screen and(min-width: 768px) {
+    .navbar .btn, .container-header .btn {
+        width: 25%;
+    }
+    .products .row .row-item .btn {
+        margin: 0 20%;
+    }
+    .organic-fruits-container {
+        &__row {
+            .row-item {
+                .btn {
+                    margin: 0 20%;
+                    
+                }
+            }
+        }
+    }
+    .basket-container__row-right .btn {
+        width: 25%;
+    }
+
+    .delivery .row-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .delivery .row .delivery-info {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__content-1, &__content-2, &__content-3 {
+            width: 50%;
+        
+        }
+        &__content-3 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__text {
+            padding-left: 0;
+        }
+    }
+    .products .row, .organic-fruits-container .organic-fruits-container__row{
+        padding: 3em;
+    }
+    .basket-container__row-right-container {
+        justify-content: flex-start;
+
+        &--box {
+            width: 15%;
+        }
+        &--box + &--box {
+            margin-left: 1em;
+        }
+    }
+    .order-container {
+        &__form {
+            .btn {
+                margin-top: 5%;
+            }
+        }
+        &__contact {
+             height: 90vh;
+        }
+    }
+    
+}
+
+@media screen and(min-width: 900px) {
+    .products .row {
+        padding: 8em;
+    }
+    .basket-container__row-left, .basket-container__row-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .organic-veg-container__row .product-item .product-info {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        height: 90%;
+
+        &__span {
+            padding: 0em 0.1em 0em 0.2em;
+        }
+    }
+    .products .row, .organic-fruits-container .organic-fruits-container__row {
+        padding: 8em;
+    }
+    .basket-container__row-right {
+        margin-top: 3% !important;
+        }
+    
+}
+@media screen and (min-width: 920px) {
+    .container-cards {
+        &__card-1, &__card-2, &__card-3, &__card-4 {
+            height: 50vh;
+            flex: 0 0 48%; 
+            margin-right: 2px; 
+        }
+        &__card-2 {
+            margin-top: 0;
+        }
+
+    }
+    
+}
+@media screen and(min-width: 950px) {
+    .navbar .btn {
+        width: 100%;
+    }
+    .container-header {
+        padding: 0;
+    }
+    .container-header-background {
+        width: 100vw;
+        height: 70vh;
+        background-image: url('/Images/Header\ background.jpg');
+        background-position: center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
+    .container-header__text {
+        width: 60%;
+        margin-left: 0;
+        padding: 2em;
+        p {
+            width: 45%;
+        }
+    }
+    .container-cards {
+        &__card-1, &__card-2, &__card-3, &__card-4 {
+            height: 45vh;
+            flex: 0 0 48%; 
+            margin-right: 2px; 
+        }
+        
+        &__card-3, &__card-4 {
+            margin-top: 0.5em;
+        }
+
+        &__card-2 {
+            margin-top: 0;
+        }
+    }
+    .delivery {
+        .row {
+            .row-img {
+                width: 60%;
+                padding-left: 1em;
+            }
+            .delivery-info {
+                width: 40%;
+                flex-direction: column;
+
+                &__content-1, &__content-2, &__content-3 {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .products-row {
+        margin-top: 0;
+    }
+    .basket-container {
+        padding-top: auto;
+        padding-bottom :auto;
+    }
+    
+    .basket-container__row-left .square {
+                position: absolute;
+                width: 90%;
+                height: 80%;
+                top: 5%;
+                left: -5%;
+    }
+    .basket-container__row-right {
+       margin-top: -3%;
+    }
+    .basket-container .basket-container__row-right .btn {
+        width: 40%;
+    
+    }
+    .basket-container__row-right-container {
+        &--box {
+            width: 25%;
+        }
+        
+    }
+    .organic-veg-container__row {
+        margin-top: 0;
+    }
+    .organic-veg-container__row .product-item .product-info {
+        width: 100%;
+    }
+    .organic-fruits-container__row {
+        margin-top: 0;
+    }
+    .order-container {
+        &__form {
+            .btn {
+                margin-top: 8%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .container-cards {
+        &__card-1, &__card-3 {
+            margin-right: -0.5em;
+        }
+        &__card-2, &__card-4 {
+            margin-left: -0.5em;
+        }
+        
+    }
+    .basket-container__row-left .square {
+        top: -3%;
+    }
+}
+@media screen and(min-width: 1200px) {
+    
+    .basket-container__row-left .square {
+        height: 95%;
+    }
+    .basket-container__row-right-container--box {
+        width: 20%;
+    }
+    .organic-veg-container__row .product-item .product-info {
+        display: flex;
+        justify-content: space-around;
+        width: 85%;
+    }
+    .products {
+        margin-top: 5%;
+    }
+}

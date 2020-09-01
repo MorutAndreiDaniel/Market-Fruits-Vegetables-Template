@@ -1,0 +1,51 @@
+$width : 80%;
+$btn-transition : all 0.3s ease-in-out;
+
+
+/*Organic Vegetables*/
+.organic-veg-container {
+    margin-top: 10%;
+
+    &__row {
+        margin-top: 10%;
+
+    }
+}
+.product-info:hover {
+    border-radius: 16px;
+    box-shadow:  7px 7px 14px #b8b8b8, 
+                -7px -7px 14px #c8c8c8;
+               
+}
+.product-item {
+    margin-top: 5%;
+    
+    .product-info {
+
+        &__span {
+            font-size: 5em;
+        }
+        &__desc {
+            h5, p {
+                font-weight: bold;
+            }
+            p {
+                margin-bottom: 0;
+                align-self: center;
+            }
+            .btn {
+                width: $width;
+                transition: $btn-transition;
+            }
+        }
+    }
+}
+
+/*Organic Fruits*/
+.organic-fruits-container {
+    margin-top: 10%;
+
+    &__row {
+        margin-top: 10%;
+    }
+}

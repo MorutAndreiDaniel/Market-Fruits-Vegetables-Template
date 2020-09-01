@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Morut Andrei-Daniel">
+    <meta name="description" content="A food-market website containing vegetables and fruits to choose from">
+    <meta name="keywords" content="market, food, vegetables, fruits">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Lora:wght@500&display=swap" rel="stylesheet"> 
+    <title>Food Market</title>
+    
+</head>
+<body>
+    <header>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-light d-flex">
+            <a class="navbar-brand" href="index.html">Fruity</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto align-items-center">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html#about">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#fruits&veg">Fruits & Vegetables</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#package">Fruits & Vegetables Package</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#organic-veg">Organic Vegetables Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html#organic-fruits">Organic Fruits Products</a>
+                  </li>
+              </ul>
+            </div>
+          </nav>
+        <!--Navbar End-->
+    </header>
+    <a class="top-link hide" id="js-top"></a>
+    <div class="container order-container">
+      <div class="row">
+        <div class="order-container__form col-md-6 col-sm-12">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label for="inputAddress">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="text">Your Message</label>
+              <textarea class="form-control" id="text" rows="5" placeholder="Write your order"></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+          </form>
+        </div>
+        <div class="order-container__contact col-md-6 col-sm-12 d-flex flex-column justify-content-center">
+          <div class="order-container__contact-overlay d-flex flex-column">
+            <h2 class="text-center">Order from us</h2>
+            <p class="text-center">Lorem, ipsum dolor.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <h5 class="text-center mt-4">Contact Us</h5>
+            <adress class="d-flex flex-column align-self-center mt-2">
+              <p>Email: test@gmail.com</p>
+              <p>Tel: +423451278</p>
+              <p>Adress: 3St. London</p>
+            </adress>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="d-flex justify-content-center">
+        <h5 class="align-self-center">&copy; 2020 Morut Andrei-Daniel</h5>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="main.js" defer></script>
+</body>
+</html>

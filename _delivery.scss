@@ -1,0 +1,49 @@
+$icon-font : 1.5em;
+$primary-clr : #ffc107;
+
+.delivery {
+    margin-top: 5%;
+    background-color: rgba(232,232,232, 0.5);
+    scroll-behavior: smooth;
+
+    .row-img {
+        padding: 5% 0;
+    }
+    img {
+        border-radius: 25%;
+    }
+}
+.delivery-info {
+    margin-top:5%;
+    flex-direction: column;
+    
+    &__content-1, &__content-2, &__content-3 {
+        display: flex;
+        margin-top: 5%;
+
+        .icon i {
+            font-size: $icon-font;
+            color: #fff;
+       }
+
+        .circle {
+            background-color: $primary-clr;
+            border-radius: 50%;
+            width: 3em;
+            height: 3em;
+            z-index: -4;
+            top: 0;
+            left: 0;
+        }
+
+    }
+   
+    &__text {
+        padding-left: 2em;
+        width: 80%;
+        
+        h5 {
+            font-weight: 800;
+        }
+    }
+}
